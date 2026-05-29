@@ -7,7 +7,7 @@
 An interactive prototype demonstrating predictive, trustworthy, and resilient
 logistics decision-making for Indonesian e-commerce.
 
-### ▶ [**View the Live Demo**](https://sentinel-demo.vercel.app)
+### ▶ [**View the Live Demo**](https://sentinel-demo-amber-seven.vercel.app/)
 
 [Portfolio](https://sentul-labs-id.github.io/sentinel-team/) · [Sentul Labs](https://github.com/sentul-labs-id)
 
