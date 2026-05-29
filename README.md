@@ -7,7 +7,9 @@
 An interactive prototype demonstrating predictive, trustworthy, and resilient
 logistics decision-making for Indonesian e-commerce.
 
-[**Live Demo**](https://sentinel-demo.vercel.app) · [**Portfolio**](https://sentul-labs-id.github.io/sentinel-team/) · [**Sentul Labs**](https://github.com/sentul-labs-id)
+### ▶ [**View the Live Demo**](https://sentinel-demo.vercel.app)
+
+[Portfolio](https://sentul-labs-id.github.io/sentinel-team/) · [Sentul Labs](https://github.com/sentul-labs-id)
 
 Built for the **AI Open Innovation Challenge 2026** — Logistics Sector
 
@@ -20,23 +22,20 @@ Built for the **AI Open Innovation Challenge 2026** — Logistics Sector
 SENTINEL is a logistics intelligence platform that goes beyond conventional route
 optimization. It adds a layer of **trust, integrity, and resilience** on top of
 standard delivery operations: verifiable carbon accounting, multi-vector fraud
-detection, and cascading failure simulation.
+detection, and cascading-failure simulation.
 
 This repository contains an **interactive frontend prototype** that demonstrates
-the platform's business process and user experience. It is a visual prototype
-built to show how operators would interact with SENTINEL across its eight core
-modules.
+the platform's business process and user experience across its eight core modules.
 
-> **Note on scope.** This is a frontend prototype with simulated data, built to
-> demonstrate the product experience and business process. The machine-learning
-> models, data pipelines, and backend services are specified in the project
-> proposal and are intended for the implementation phase.
+> **Note on scope.** This is a frontend prototype with mock data, built to
+> demonstrate SENTINEL's business process and UX for the AI Open Innovation
+> Challenge 2026. The machine-learning models, data pipelines, and backend
+> services are specified in the project proposal and are intended for the
+> implementation phase.
 
 ---
 
 ## Modules
-
-SENTINEL is organized around eight modules, accessible from a unified dashboard:
 
 | # | Module | What it does |
 |---|--------|--------------|
@@ -44,10 +43,22 @@ SENTINEL is organized around eight modules, accessible from a unified dashboard:
 | 02 | **SLA Risk Classifier** | Scores each shipment's risk of breaching its delivery SLA |
 | 03 | **Carbon Footprint** | Calculates per-shipment emissions, aligned with GHG Protocol Scope 3 |
 | 04 | **Trust & Resilience Layer** | Validates every data record for tampering and anomalies before use — *the core differentiator* |
-| 05 | **Fraud Detection** | Detects GPS spoofing, ghost deliveries, and COD syndicate behavior |
+| 05 | **Fraud Detection** | Detects GPS spoofing, ghost deliveries, and COD syndicate behaviour |
 | 06 | **Route Optimization** | Balances time, cost, and carbon across a Pareto frontier of routes |
 | 07 | **Cascade Simulator** | Predicts how one hub disruption ripples across the network |
 | 08 | **Dashboard** | Unified command center for monitoring and decisions |
+
+---
+
+## Screenshots
+
+| Command Center | Trust & Resilience Layer |
+|:---:|:---:|
+| ![Dashboard](screenshots/01-dashboard-full.png) | ![Trust Layer](screenshots/05-trust-results.png) |
+
+| Route Optimization | Cascade Simulator |
+|:---:|:---:|
+| ![Route Optimization](screenshots/14-route-result.png) | ![Cascade Simulator](screenshots/16-cascade-result.png) |
 
 ---
 
@@ -57,9 +68,9 @@ SENTINEL is organized around eight modules, accessible from a unified dashboard:
 - **Tailwind CSS** — utility-first styling
 - **Framer Motion** — animations and transitions
 - **Recharts** — data visualization
-- **react-force-graph-2d** — network graph visualization
+- **react-force-graph-2d** — network graph visualization (fraud cluster, cascade)
 - **lucide-react** — icons
-- **React Router** — client-side routing
+- **React Router** — client-side routing (lazy-loaded screens)
 
 ---
 
@@ -68,7 +79,7 @@ SENTINEL is organized around eight modules, accessible from a unified dashboard:
 ### Prerequisites
 
 - Node.js 18 or newer
-- npm (or pnpm / yarn)
+- npm
 
 ### Installation
 
@@ -99,19 +110,24 @@ npm run preview    # Preview the production build locally
 
 ```
 sentinel-demo/
-├── public/                  # Static assets (architecture diagram, favicon)
+├── public/                  # Static assets (favicon)
+├── screenshots/             # Demo screenshots (used in this README)
 ├── src/
 │   ├── components/
-│   │   ├── layout/         # App shell, sidebar, top bar
-│   │   ├── ui/             # Reusable UI components
-│   │   └── charts/         # Chart wrappers
-│   ├── pages/              # One file per module screen
-│   ├── data/               # Simulated datasets
-│   ├── lib/                # Utilities and helpers
-│   ├── App.jsx             # Routes
-│   └── main.jsx            # Entry point
+│   │   ├── layout/          # App shell, sidebar, top bar
+│   │   ├── ui/              # Reusable UI components
+│   │   ├── dashboard/       # Dashboard widgets (map, alerts, charts)
+│   │   ├── trust/           # Trust Layer demo components
+│   │   ├── demo/            # Shared input → result demo scaffolding
+│   │   └── viz/             # Force-graph wrapper
+│   ├── pages/               # One file per module screen
+│   ├── data/                # Mock data + deterministic demo logic
+│   ├── lib/                 # Utilities and helpers
+│   ├── App.jsx              # Routes (lazy-loaded)
+│   └── main.jsx             # Entry point
 ├── tailwind.config.js
 ├── vite.config.js
+├── vercel.json              # SPA routing rewrite
 └── package.json
 ```
 
@@ -134,10 +150,6 @@ SENTINEL is developed by **Sentul Labs**, an independent team of postgraduate
 engineers, as an entry to the AI Open Innovation Challenge 2026 (Logistics
 Sector, case provider Blibli).
 
-The team brings combined expertise in cyber-resilient architecture, threat
-modeling, anomaly detection, and applied machine learning — the foundation for a
-platform built around trust and resilience, not just optimization.
-
 | Role | Member |
 |------|--------|
 | Project Manager | Syadad Aulia Rahman |
@@ -150,7 +162,7 @@ platform built around trust and resilience, not just optimization.
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
+Released under the MIT License.
 
 <div align="center">
 <sub>Built by Sentul Labs · AI Open Innovation Challenge 2026</sub>

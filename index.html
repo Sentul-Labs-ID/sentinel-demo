@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENTINEL — Cyber-Resilient AI Logistics</title>
+    <meta
+      name="description"
+      content="SENTINEL — a cyber-resilient AI logistics intelligence platform: predictive delay & SLA risk, verifiable carbon, multi-vector fraud detection, and cascading-failure simulation for Indonesian e-commerce."
+    />
+    <meta name="theme-color" content="#0a0e14" />
+
+    <!-- Social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SENTINEL — Cyber-Resilient AI Logistics" />
+    <meta
+      property="og:description"
+      content="Predictive, trustworthy & resilient logistics intelligence. Interactive prototype."
+    />
+
+    <!-- Fonts: Inter (UI), JetBrains Mono (data), Fraunces (display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* First-paint splash — shown before the JS bundle mounts, then React
+         replaces #root. Inline so it appears instantly without Tailwind. */
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #0a0e14;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+      }
+      #boot .mark {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        border-radius: 8px;
+        border: 2px solid rgba(245, 158, 11, 0.45);
+        background: rgba(245, 158, 11, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #boot .mark::after {
+        content: '';
+        height: 14px;
+        width: 14px;
+        border-radius: 3px;
+        background: #f59e0b;
+      }
+      #boot .word {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        color: #e6edf3;
+        padding-left: 0.28em;
+      }
+      #boot .spin {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 2px solid #1f2937;
+        border-top-color: #f59e0b;
+        animation: bootspin 0.7s linear infinite;
+      }
+      @keyframes bootspin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot">
+        <div class="mark"></div>
+        <div class="word">SENTINEL</div>
+        <div class="spin"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
